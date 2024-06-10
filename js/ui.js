@@ -7,11 +7,11 @@ function detectColorScheme() {
 
         try {
             document.getElementById('logo').setAttribute('src', `/img/${newTheme}.jpg`);
-        } catch { }
+        } catch(_) { }
 
         try {
             map.setStyle(`mapbox://styles/mapbox/${newTheme}-v11`);
-        } catch { }
+        } catch(_) { }
     };
 
     setTheme(themeMediaQuery);
