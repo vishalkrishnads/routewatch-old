@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>routewatch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/css/global.css?v=1.0">
+        <link rel="stylesheet" href="/css/visual.css?v=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        
+        <script src='https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='map' style="width: 100vw; height: 100vh;"></div>
+        <div id="toast" class="status">
+            <div class="icon"></div>
+            <div class="text"></div>
+        </div>
+        <div class="controls">
+            <div class="top">
+                <div class="border"></div>
+                <div class="date from">
+                    <p>from</p>
+                    <input class="value" type="date">
+                </div>
+                <div class="date to">
+                    <p>to</p>
+                    <input class="value" type="date">
+                </div>
+                <div class="border"></div>
+            </div>
+            <div class="bottom">
+                <button>change account</button>
+                <div class="legend">
+                    <p class="marker" style="color: blue;">-</p>
+                    <p>human</p>
+                    <p class="marker" style="color: green; margin-left: 10px;">-</p>
+                    <p>openpilot</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/map.js" type="module"></script>
+        <script src="/js/ui.js" type="module"></script>
+    </body>
+</html>
