@@ -1,7 +1,8 @@
-import { hasAccount, addAccount } from '../db.js'
+import { hasAccount } from '../db.js'
+import { login } from '../network/api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (hasAccount()) window.location.replace('/visual.html')
+    if (hasAccount()) window.location.replace('/devices.html')
 
     // UI validation
     const tokenInput = document.getElementById('token');
@@ -23,11 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function continueWithDemo() {
-    addAccount('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDg1ODI0NjUsIm5iZiI6MTcxNzA0NjQ2NSwiaWF0IjoxNzE3MDQ2NDY1LCJpZGVudGl0eSI6IjBkZWNkZGNmZGYyNDFhNjAifQ.g3khyJgOkNvZny6Vh579cuQj1HLLGSDeauZbfZri9jw')
-    window.location.replace('/visual.html')
+    login('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDg1ODI0NjUsIm5iZiI6MTcxNzA0NjQ2NSwiaWF0IjoxNzE3MDQ2NDY1LCJpZGVudGl0eSI6IjBkZWNkZGNmZGYyNDFhNjAifQ.g3khyJgOkNvZny6Vh579cuQj1HLLGSDeauZbfZri9jw')
+    .then(() => {window.location.replace('/devices.html')})
+    .catch(error => alert(JSON.stringify(error.message)))
 }
 
 function add(token) {
-    addAccount(token);
-    window.location.replace('/visual.html')
+    login(token)
+    .then(() => {window.location.replace('/devices.html')})
+    .catch(error => alert(JSON.stringify(error)))
 }
