@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>routewatch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/devices.css?v=0.1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <div class="border"></div>
+        <div class="content">
+            <img src="/img/dark.jpg" id="logo" alt="comma.ai">
+            <h2 id="greeting" style="margin-block: 0em;">hi there geo</h2>
+            <p style="margin-block: 0.5em;">select your device</p>
+            
+            <div class="devices">
+                <div class="device">
+                    <div class="icon">
+                        <span class="material-icons">developer_board</span>
+                    </div>
+                    <div class="name">
+                        <p id="name">uniqueunireacomma</p>
+                        <p id="type">neo</p>
+                    </div>
+                </div>
+                <div class="device">
+                    <div class="icon">
+                        <span class="material-icons">stay_current_landscape</span>
+                    </div>
+                    <div class="name">
+                        <p id="name">uniqueunireacomma</p>
+                        <p id="type">eon</p>
+                    </div>
+                </div>
+                <div class="device">
+                    <div class="icon">
+                        <span class="material-icons">android</span>
+                    </div>
+                    <div class="name">
+                        <p id="name">uniqueunireacomma</p>
+                        <p id="type">app</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loader" style="display: none;" class="content">
+            <span class="loader"></span>
+        </div>
+        <div class="border footer">
+            <p>with love from india</p>
+            <a href="https://github.com/vishalkrishnads/routewatch">source code</a>
+        </div>
+
+        <script type="module" src="/js/auth/devices.js"></script>
+        <script type="module" src="/js/db.js"></script>
+        <script type="module" src="/js/ui.js"></script>
+    </body>
+</html>
