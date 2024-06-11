@@ -4,8 +4,8 @@
         <title>routewatch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/css/global.css?v=1.0">
-        <link rel="stylesheet" href="/css/visual.css?v=1.0">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/visual.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +27,16 @@
                 <div class="border"></div>
                 <div class="date from">
                     <p>from</p>
-                    <input class="value" type="date">
+                    <input class="value" id="from" type="date">
                 </div>
                 <div class="date to">
                     <p>to</p>
-                    <input class="value" type="date">
+                    <input class="value" id="to" type="date">
                 </div>
                 <div class="border"></div>
             </div>
             <div class="bottom">
-                <button>change account</button>
+                <button id="change-account">change account</button>
                 <div class="legend">
                     <p class="marker" style="color: blue;">-</p>
                     <p>human</p>
@@ -46,7 +46,9 @@
             </div>
         </div>
 
+        <script src="/js/auth/visuals.js" type="module"></script>
         <script src="/js/map.js" type="module"></script>
         <script src="/js/ui.js" type="module"></script>
+        <script src="/js/core.js" type="module"></script>
     </body>
 </html>
